@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>My Signal Analyzer</title>
+<style>
+body{
+font-family:Arial;
+background:#111;
+color:white;
+text-align:center;
+padding:30px;
+}
+button{
+padding:15px 30px;
+font-size:20px;
+border:none;
+border-radius:10px;
+}
+#result{
+margin-top:30px;
+font-size:24px;
+}
+</style>
+</head>
+
+<body>
+
+<h2>AI Signal Analyzer</h2>
+
+<button onclick="signal()">Analyze</button>
+
+<div id="result"></div>
+
+<script>
+function signal(){
+
+let rsi=Math.floor(Math.random()*100);
+
+let text="";
+
+if(rsi<30){
+text="🟢 UP\nRSI : "+rsi+"\nConfidence : 72%";
+}
+else if(rsi>70){
+text="🔴 DOWN\nRSI : "+rsi+"\nConfidence : 71%";
+}
+else{
+text="⚪ WAIT\nRSI : "+rsi;
+}
+
+document.getElementById("result").innerText=text;
+
+}
+</script>
+
+</body>
+</html>
